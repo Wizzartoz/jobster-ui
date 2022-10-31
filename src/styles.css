@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap-reboot.min.css";
+@import '~quill/dist/quill.snow.css';
+
+.body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
+}
