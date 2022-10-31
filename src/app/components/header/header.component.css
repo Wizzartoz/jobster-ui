@@ -1,0 +1,176 @@
+.header {
+  height: 60px;
+  background: #513dd9;
+  width: 100%;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+  position: fixed;
+  z-index: 1000
+}
+
+
+.container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+p {
+  margin: 0;
+}
+
+.logo {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  align-self: center;
+}
+
+
+.wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  display: block;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  padding-top: 19px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.22);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: block;
+  background: url("src/assets/DSC_0028+.jpg") top center/cover;
+}
+
+.material-symbols-outlined {
+   color: white;
+   align-self: center;
+   margin-left: 10px;
+  transition: all 0.5s ease;
+   font-variation-settings:
+     'FILL' 0,
+     'wght' 400,
+     'GRAD' 0,
+     'opsz' 48
+ }
+
+.menu {
+  display: none;
+}
+
+.dropdown-burger-menu{
+  width: 100%;
+  background-color: #ffffff;
+  top: 18px;
+  position: relative;
+}
+
+
+.dropdown-burger-menu__item {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #232121;
+  width: 100%;
+  height: 40px;
+  padding-top: 5px;
+  background-color: white;
+  transition: all 1s ease;
+
+}
+
+.dropdown-burger-menu__item:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+.material-symbols-outlined:hover {
+  color: rgba(0, 0, 0, 0.22);
+
+}
+
+
+.wrap-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  padding-top: 5px;
+  width: 150px;
+  background-color: #fdfeff;
+  position: absolute;
+  top: 62px;
+  right: 70px;
+}
+
+
+@media (max-width: 1199px) {
+  .container {
+    width: 900px;
+  }
+
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 500px;
+    padding-top: 7px;
+  }
+  .btn {
+    display: none;
+  }
+
+  .dropdown-menu {
+    right: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 380px;
+  }
+  .wrap-avatar {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .material-symbols-outlined {
+    display: block;
+  }
+
+  .header {
+    padding-top: 10px;
+  }
+
+}

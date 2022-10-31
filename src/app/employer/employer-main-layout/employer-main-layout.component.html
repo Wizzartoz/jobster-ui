@@ -1,0 +1,23 @@
+<header>
+  <app-employer-header></app-employer-header>
+</header>
+<section>
+  <div class="container">
+    <div class="wrap">
+      <div class="left-section">
+        <app-employer-filter></app-employer-filter>
+      </div>
+      <div class="right-section">
+        <app-employer-card
+        *ngFor="let candidate of candidates"
+        [candidate]="candidate"
+        (click)="openCandidate()"
+        ></app-employer-card>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+  </div>
+</footer>

@@ -1,0 +1,22 @@
+<div class="body">
+  <h2 class="title">
+    {{post.title}}
+  </h2>
+  <p class="description">
+    {{post.description | slice:0:207 | addStringIf}}
+  </p>
+  <div class="line">
+
+  </div>
+  <p  class="company_name">
+    {{post.company}}
+  </p>
+  <div class="wrap-time">
+    <p class="material-symbols-outlined">
+      schedule
+    </p>
+    <p class="days">
+      {{post.date}}
+    </p>
+  </div>
+</div>

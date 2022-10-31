@@ -1,0 +1,30 @@
+
+.error-message {
+  font-weight: 700;
+  font-size: 70px;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: #4030ab;
+}
+
+
+@media (max-width: 991px) {
+  .error-message {
+    font-size: 50px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .error-message {
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .error-message {
+    font-size: 20px;
+  }
+}

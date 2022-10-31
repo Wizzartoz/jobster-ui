@@ -1,0 +1,28 @@
+<div class="wrap">
+  <div class="body-left">
+    <app-employer-vacancy-card
+    *ngFor="let vacancy of vacancies"
+    [vacancy]="vacancy"
+    (onDelete)="deleteVacancy($event)"
+    ></app-employer-vacancy-card>
+  </div>
+  <div class="body-right">
+    <p class="title">
+      Title:
+    </p>
+    <input placeholder="Java Software Engineer" type="text" [value]="" class="input">
+    <p class="title">
+      Salary:
+    </p>
+    <input placeholder="400$" type="text" class="input">
+    <div>
+      <p class="description">
+        About vacancy:
+      </p>
+      <textarea placeholder="Type something..." class="text"></textarea>
+    </div>
+    <a class="create-btn" >
+      Create
+    </a>
+  </div>
+</div>

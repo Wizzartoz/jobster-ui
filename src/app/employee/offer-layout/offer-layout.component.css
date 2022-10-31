@@ -1,0 +1,28 @@
+.container {
+  margin: auto;
+  width: 800px;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 400px;
+  }
+}

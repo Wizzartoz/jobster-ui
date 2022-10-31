@@ -1,0 +1,22 @@
+<header>
+  <app-header></app-header>
+</header>
+<section (keydown.enter)="sendMessage(input)">
+  <div class="container">
+    <div class="body">
+      <app-message *ngFor="let message of list"
+      [message]="message.message"
+      [isFrom]="message.isFrom"></app-message>
+    </div>
+    <div class="send">
+          <div class="response-wrap">
+            <input #input class="response-input" placeholder="Type something..." type="text" name="" id="">
+            <a (click)="sendMessage(input)" class="response-btn-send">
+            <span class="material-symbols-outlined send-icon">
+              send
+            </span>
+            </a>
+          </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<div class="body">
+  <p class="title">
+    Job title:
+  </p>
+  <input placeholder="Java Software" type="text" class="input">
+  <p class="title">
+    Salary expectations:
+  </p>
+  <input placeholder="200$" type="text" class="input">
+  <div>
+    <p class="description">
+      Description:
+    </p>
+    <textarea placeholder="Type something..." class="text"></textarea>
+  </div>
+
+  <div class="upload">
+    <label for="file-upload" >
+      <span class="material-symbols-outlined">
+      upload_file
+    </span>
+    </label>
+    <input id="file-upload" (input)="downloadFile($event)" type="file"/>
+    <small class="file-name">{{fileName}}</small>
+    <p (click)="clearFile()" *ngIf="fileName !== null" class="material-symbols-outlined">
+      close
+      </p>
+  </div>
+
+  <div class="wrap-btn">
+    <a href="" class="btn">
+      Save changes
+    </a>
+    <input id="chck" type="checkbox">
+    <label for="chck" class="check-trail">
+      <span class="check-handler"></span>
+    </label>
+
+  </div>
+</div>

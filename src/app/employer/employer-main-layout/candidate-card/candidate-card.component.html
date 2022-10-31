@@ -1,0 +1,82 @@
+<header>
+  <app-employer-header></app-employer-header>
+</header>
+<section>
+  <div class="container">
+    <div class="wrap">
+      <div class="head-wrap">
+        <div class="head">
+          <h2 class="head__title">
+            Junior Java Engineer
+          </h2>
+          <p class="head__salary">
+            400 $
+          </p>
+          <div class="company-wrap">
+            <p class="head__experience">
+              2 years experience
+            </p>
+          </div>
+        </div>
+        <div (click)="openProfile()" class="about">
+
+        </div>
+      </div>
+      <div class="body">
+        Книжковий Склад під Варшавою
+
+        Місце роботи М. Блоне (30 км від Варшави)
+
+        Тільки денні зміни з 06:00
+
+        8-12 годин зміна, 5-6 днів на тиждень
+
+        Годин-240-260
+
+        Обов'язки:
+
+        - збір книг за накладними, робота зі сканером
+
+        Вимоги:
+
+        ️ - бажано жінкі або чоловікі середнього віку
+
+        ️ - знання польської не потрібно
+
+        Умови:
+
+        - фізично робота не важка
+
+        - умова злецення
+
+        - робота сезонна з червня до жовтень / листопад
+
+        - тільки громадяни України
+
+        Ставка 14.50 зл/год нетто, до 26 років - 15.50 зл/год нетто.
+
+        студенти - 19,70 зл нетто
+
+        Житло-надаємо поблизу до роботи, в хороших умовах (250 зл утримується з зарплати)
+      </div>
+      <a *ngIf="!isResponseBlockOpen" (click)="openResponseBlock()" class="response_btn">
+        Response
+      </a>
+      <div class="response">
+        <div class="response-block" *ngIf="isResponseBlockOpen">
+          <div class="response-wrap">
+            <input class="response-input" placeholder="Type something..." type="text" name="" id="">
+            <a class="response-btn-send">
+      <span class="material-symbols-outlined send-icon">
+        send
+      </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+
+</footer>

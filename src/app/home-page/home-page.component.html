@@ -1,0 +1,51 @@
+<header [ngClass]="{
+  'header-employer': isEmployer,
+  'header-employee': !isEmployer
+}" >
+  <div class="container">
+    <div class="head">
+      <p class="head__logo">
+        JOBSTER
+      </p>
+      <ul class="head__toolbar">
+        <li class="head__item">
+          <a class="head__link" [routerLink]="['/about']">
+            About
+          </a>
+        </li>
+        <li class="head__item">
+          <a class="head__link" [routerLink]="['/login']">
+            Login
+          </a>
+        </li>
+        <li class="head__item">
+          <a [routerLink]="['/register/employee']" class="head__link" href="#">
+            Register
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="body">
+      <h1 class="body__title">
+        THE BEST SITE TO FIND A JOB
+      </h1>
+      <h2 class="body__description">
+        CHOOSE YOUR SIDE
+      </h2>
+      <div class="btn-wrap">
+        <a class="border-radius" (mouseover)="employerFocus()"  [ngClass]="{
+          'btn-blue': isEmployer,
+          'btn-red-outline' : !isEmployer
+        }" [routerLink]="['/register/employer']">
+          Employer
+        </a>
+        <a class="border-radius" (mouseover)="employeeFocus()"  [routerLink]="['/register/employee']" [ngClass]="{
+          'btn-blue-outline': isEmployer,
+          'btn-red' : !isEmployer
+        }">
+          Employee
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

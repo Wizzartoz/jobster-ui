@@ -1,0 +1,25 @@
+<div class="body">
+  <h2 class="title">
+    {{candidate.position}}
+  </h2>
+  <small class="exp">
+    {{candidate.experience | convertExpirienceToString}}
+  </small>
+  <p class="description">
+    {{candidate.description | slice:0:207 | addStringIf}}
+  </p>
+  <div class="line">
+
+  </div>
+  <p class="company_name">
+    {{candidate.salary}}$
+  </p>
+  <div class="wrap-time">
+    <p class="material-symbols-outlined">
+      schedule
+    </p>
+    <p class="days">
+      {{candidate.date}}
+    </p>
+  </div>
+</div>

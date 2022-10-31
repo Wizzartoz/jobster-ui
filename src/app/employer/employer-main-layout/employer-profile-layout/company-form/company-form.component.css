@@ -1,0 +1,142 @@
+.body-right {
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 6px 6px rgba(0,0,0,.1);
+  transition: all 0.5s ease;
+}
+
+.body-left {
+  width: 28%;
+  border-radius: 10px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 6px 6px rgba(0,0,0,.1);
+  transition: all 0.5s ease;
+  margin-bottom: 10px;
+  order: 1;
+}
+
+.img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #8080801a;
+  margin: auto;
+  background: url("src/assets/logo.png") no-repeat top center/ cover;
+}
+
+.change-btn {
+  margin: 20px 0 auto;
+  display: block;
+  text-decoration: none;
+  color: white;
+  height: 45px;
+  background-color: #513dd9;
+  text-align: center;
+  width: 560px;
+  padding-top: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.change-btn:hover {
+  background-color: #4230c4;
+}
+
+.upload-img {
+  margin: 60px 0 auto;
+  display: block;
+  text-decoration: none;
+  color: white;
+  height: 45px;
+  background-color: #513dd9;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.upload-img:hover {
+  background-color: #4230c4;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.text {
+  margin-top: 10px;
+  width: 560px;
+  height: 460px;
+  resize: none;
+  border: 1px rgba(0,0,0,0.1) solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+  padding: 20px;
+}
+
+
+
+.input {
+  padding: 0 20px 0;
+  display: block;
+  width: 560px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px rgba(0,0,0,0.1) solid;
+  margin-top: 5px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .body-left {
+    order: 0;
+    width: 100%;
+  }
+
+  .body-right {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .change-btn {
+    width: 100%;
+  }
+
+
+  .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+
+
+}
+
+@media (max-width: 575px) {
+
+}
+
+@media (max-width: 500px) {
+
+}

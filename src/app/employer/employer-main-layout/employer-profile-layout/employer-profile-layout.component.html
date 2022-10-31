@@ -1,0 +1,20 @@
+<header>
+  <app-employer-header></app-employer-header>
+</header>
+<section class="btn-section">
+  <div class="container">
+    <div class="wrap-btn">
+      <a [routerLink]="['/employer/profile']" class="btn">
+        Profile
+      </a>
+      <a [routerLink]="['/employer/profile/create-vacancy']" class="btn">
+        Vacancy
+      </a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<header>
+  <app-header></app-header>
+</header>
+<section class="btn-section">
+  <div class="container">
+    <div class="wrap-btn">
+      <a [routerLink]="['/employee/profile']" class="btn">
+        Profile
+      </a>
+      <a *ngIf="isCVExist" [routerLink]="['/employee/profile/resume']" class="btn">
+        CV
+      </a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section>
+  <div class="form">
+    <input *ngIf="isEmployee" placeholder="First name" type="text" class="form__column">
+    <input *ngIf="isEmployee" placeholder="Last name" type="text" class="form__column">
+    <input *ngIf="!isEmployee" placeholder="Company name" type="text" class="form__column">
+    <input placeholder="Login" type="text" class="form__column">
+    <input placeholder="Password" type="password" class="form__column">
+    <input placeholder="Email" type="email" class="form__column">
+    <div class="form__btn-wrap">
+      <div (click)="changeLeftBtn()" href="" [ngClass]="{
+        'form__btn-left' : isEmployee,
+        'form__btn-left-not' : !isEmployee
+      }" class="form__btn-left">
+        Employer
+      </div>
+      <div (click)="changeRightBtn()" [ngClass]="{
+        'form__btn-right' : isEmployee,
+        'form__btn-right-not' : !isEmployee
+      }">
+        Employee
+      </div>
+    </div>
+    <a [routerLink]="['/employer']" [ngClass]="{
+    'form__btn-send' : isEmployee,
+    'form__btn-send-second' : !isEmployee
+  }">
+      Register
+    </a>
+  </div>
+</section>

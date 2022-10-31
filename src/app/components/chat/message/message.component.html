@@ -1,0 +1,21 @@
+<div [ngClass]="{
+  'wrap': !isFrom,
+  'wrap-right': isFrom
+}">
+  <div class="avatar">
+
+  </div>
+  <div [ngClass]="{
+    'message-right': isFrom,
+    'message' : !isFrom
+  }" class="message-right">
+    <div class="wrap-text">
+      <p class="message__text">
+        {{message}}
+      </p>
+      <p class="message__time">
+        17:28
+      </p>
+    </div>
+  </div>
+</div>

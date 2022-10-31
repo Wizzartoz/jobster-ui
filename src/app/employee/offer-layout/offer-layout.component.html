@@ -1,0 +1,11 @@
+<header>
+  <app-header></app-header>
+</header>
+<section>
+  <div class="container">
+    <app-offer-card
+      *ngFor="let chat of chats"
+      [chat]="chat">
+    </app-offer-card>
+  </div>
+</section>

@@ -1,0 +1,111 @@
+.body-right {
+  width: 55%;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 6px 6px rgba(0,0,0,.1);
+  transition: all 0.5s ease;
+  max-height: 900px;
+}
+
+.body-left {
+  width: 44%;
+
+  order: 1;
+}
+
+.img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #8080801a;
+  margin: auto;
+  background: url("src/assets/DSC_0028+.jpg") top center/ contain;
+}
+
+.create-btn {
+  margin: 20px 0 auto;
+  display: block;
+  text-decoration: none;
+  color: white;
+  height: 45px;
+  background-color: #513dd9;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.create-btn:hover {
+  background-color: #4230c4;
+}
+
+
+.upload-img:hover {
+  background-color: #4230c4;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.text {
+  margin-top: 10px;
+  height: 460px;
+  width: 100%;
+  resize: none;
+  border: 1px rgba(0,0,0,0.1) solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+  padding: 20px;
+}
+
+
+
+.input {
+  padding: 0 20px 0;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px rgba(0,0,0,0.1) solid;
+  margin-top: 5px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1);
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 991px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .body-left {
+    order: 0;
+    width: 100%;
+  }
+  .body-right {
+    width: 100%;
+  }
+  .body-left {
+    order: 1;
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+
+}
+

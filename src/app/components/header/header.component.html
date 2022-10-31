@@ -1,0 +1,49 @@
+<div class="header" (mouseleave)="closeDropdownMenu()">
+  <div class="container">
+    <div class="wrap">
+      <p (click)="openMainPage()" class="logo">
+        JOBSTER
+      </p>
+      <a [routerLink]="['/employee/offers']" class="btn">{{btnName}}</a>
+      <a [routerLink]="['/employee']" class="btn">Vacancies</a>
+    </div>
+
+    <div class="wrap-avatar">
+      <div class="avatar">
+
+      </div>
+      <p (click)="openDropdownMenu()" class="material-symbols-outlined arrow">
+        arrow_drop_down
+      </p>
+    </div>
+    <p (click)="openBurgerDropdownMenu()" class="material-symbols-outlined menu">
+      menu
+    </p>
+    <div class="dropdown-menu" *ngIf="isOpen">
+      <a [routerLink]="['/employee/profile']" class="dropdown-burger-menu__item">
+        My profile
+      </a>
+      <a class="dropdown-burger-menu__item">
+        Logout
+      </a>
+    </div>
+
+  </div>
+
+  <div class="dropdown-burger-menu" *ngIf="isOpenBurgerMenu">
+    <a [routerLink]="['/employee/offers']" class="dropdown-burger-menu__item">
+      Offers
+    </a>
+    <a [routerLink]="['/employee']" class="dropdown-burger-menu__item">
+      Vacancies
+    </a>
+    <a [routerLink]="['/employee/profile']" class="dropdown-burger-menu__item">
+      My profile
+    </a>
+    <a class="dropdown-burger-menu__item">
+      Logout
+    </a>
+  </div>
+
+</div>
+

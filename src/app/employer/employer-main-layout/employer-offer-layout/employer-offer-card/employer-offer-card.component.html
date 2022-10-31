@@ -1,0 +1,20 @@
+<div class="wrap">
+  <div class="company">
+    <div class="company__wrap">
+      <div class="company__img">
+
+      </div>
+      <p class="company__name">
+        {{chat.company}}
+      </p>
+    </div>
+  </div>
+  <div class="vacancy">
+    <a class="vacancy__link" [routerLink]="['/employer/candidate/1']">{{chat.vacancy}}</a>
+  </div>
+  <div class="operation">
+    <a [routerLink]="['/employer/chat']" class="material-symbols-outlined">
+      chat_bubble
+    </a>
+  </div>
+</div>
