@@ -1,9 +1,14 @@
 <section class="section">
-  <div class="form">
-      <input placeholder="Login" type="text" class="form__column">
-      <input placeholder="Password" type="password" class="form__column">
-    <a [routerLink]="['/employee']" class="form__btn-send">
-      Login
-    </a>
+  <div class="container">
+    <div class="form">
+      <p class="error" *ngIf="error != null">
+        {{error}}
+      </p>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <input placeholder="Login" type="text" class="form__column" formControlName="login">
+        <input placeholder="Password" type="password" class="form__column" formControlName="password">
+        <input value="Login" type="submit" [disabled]="form.invalid" class="form__btn-send">
+      </form>
+    </div>
   </div>
 </section>

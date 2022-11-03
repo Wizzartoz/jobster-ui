@@ -23,7 +23,7 @@
       <a [routerLink]="['/employee/profile']" class="dropdown-burger-menu__item">
         My profile
       </a>
-      <a class="dropdown-burger-menu__item">
+      <a (click)="logout()" class="dropdown-burger-menu__item">
         Logout
       </a>
     </div>
@@ -40,7 +40,7 @@
     <a [routerLink]="['/employee/profile']" class="dropdown-burger-menu__item">
       My profile
     </a>
-    <a class="dropdown-burger-menu__item">
+    <a (click)="logout()" class="dropdown-burger-menu__item">
       Logout
     </a>
   </div>

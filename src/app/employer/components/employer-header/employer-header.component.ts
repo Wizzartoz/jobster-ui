@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {timer} from "rxjs";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-employer-header',
@@ -13,7 +14,7 @@ export class EmployerHeaderComponent implements OnInit {
   isOpen = false;
   isOpenBurgerMenu = false;
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private auth: AuthService) {
   }
 
   ngOnInit(): void {
@@ -36,5 +37,9 @@ export class EmployerHeaderComponent implements OnInit {
   openMainPage() {
     this.route.navigate(['/employer'])
 
+  }
+
+  logout() {
+    this.auth.logout();
   }
 }

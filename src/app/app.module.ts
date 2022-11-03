@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -10,6 +10,12 @@ import { HomePageLayoutComponent } from './home-page-layout/home-page-layout.com
 import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
+import {HttpClientModule} from "@angular/common/http";
+import {JwtModule} from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return localStorage.getItem('AuthToken');
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +30,14 @@ import { ErrorComponent } from './error/error.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter
+      }
+    }),
   ],
   providers: [],
   exports: [
@@ -32,3 +45,4 @@ import { ErrorComponent } from './error/error.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
