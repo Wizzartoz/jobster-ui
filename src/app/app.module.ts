@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
 import {HttpClientModule} from "@angular/common/http";
 import {JwtModule} from "@auth0/angular-jwt";
+import {httpInterceptorProviders} from "./interceptors/add-token.interceptor";
 
 export function tokenGetter() {
   return localStorage.getItem('AuthToken');
@@ -39,7 +40,7 @@ export function tokenGetter() {
       }
     }),
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   exports: [
   ],
   bootstrap: [AppComponent]

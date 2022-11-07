@@ -1,19 +1,19 @@
 <div class="body">
-  <p class="title">
-    Job title:
-  </p>
-  <input placeholder="Java Software" type="text" class="input">
-  <p class="title">
-    Salary expectations:
-  </p>
-  <input placeholder="200$" type="text" class="input">
-  <div>
-    <p class="description">
-      Description:
+  <form [formGroup]="form" (ngSubmit)="sendResume()">
+    <p class="title">
+      Job title:
     </p>
-    <textarea placeholder="Type something..." class="text"></textarea>
-  </div>
-
+    <input formControlName="title" placeholder="Java Software" type="text" class="input">
+    <p class="title">
+      Salary expectations:
+    </p>
+    <input formControlName="salary" placeholder="200$" type="text" class="input">
+    <div>
+      <p class="description">
+        Description:
+      </p>
+      <textarea formControlName="about" placeholder="Type something..." class="text"></textarea>
+    </div>
   <div class="upload">
     <label for="file-upload" >
       <span class="material-symbols-outlined">
@@ -37,4 +37,5 @@
     </label>
 
   </div>
+  </form>
 </div>

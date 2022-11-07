@@ -15,6 +15,7 @@ import { ResumeComponent } from './profile-layout/resume/resume.component';
 import {SharedModule} from "../shared/shared.module";
 import {HeaderComponent} from "../components/header/header.component";
 import { EmployerCardProfileComponent } from './employer-card-profile/employer-card-profile.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -33,23 +34,24 @@ import { EmployerCardProfileComponent } from './employer-card-profile/employer-c
     HeaderComponent,
     EmployerCardProfileComponent,
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    RouterModule.forChild([
-      {path: '', component: MainPageComponent},
-      {path: 'vacancy/:id', component: VacancyComponent},
-      {path: 'offers', component: OfferLayoutComponent},
-      {path: 'chat', component: ChatComponent},
-      {path: 'employer/profile/:id', component: EmployerCardProfileComponent},
-      {
-        path: 'profile', component: ProfileComponent, children: [
-          {path: '', component: ResumeComponent},
-          {path: 'resume', component: MyProfileComponent}
-        ]
-      }
-    ]),
-  ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        RouterModule.forChild([
+            {path: '', component: MainPageComponent},
+            {path: 'vacancy/:id', component: VacancyComponent},
+            {path: 'offers', component: OfferLayoutComponent},
+            {path: 'chat', component: ChatComponent},
+            {path: 'employer/profile/:id', component: EmployerCardProfileComponent},
+            {
+                path: 'profile', component: ProfileComponent, children: [
+                    {path: '', component: ResumeComponent},
+                    {path: 'resume', component: MyProfileComponent}
+                ]
+            }
+        ]),
+        ReactiveFormsModule,
+    ],
   exports: [
     RouterModule,
     OfferLayoutComponent,

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyProfileComponent implements OnInit {
 
   fileName: string | null = null;
+  form: any;
 
   constructor() { }
 
@@ -24,5 +25,9 @@ export class MyProfileComponent implements OnInit {
     this.fileName = null;
     // @ts-ignore
     $event.target.value = null;
+  }
+
+  sendResume() {
+    
   }
 }

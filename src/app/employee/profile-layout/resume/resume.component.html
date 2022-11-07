@@ -11,34 +11,34 @@
      </a>
    </div>
    <div class="body-right">
-     <p class="title">
-       Name:
-     </p>
-     <input placeholder="Misha" type="text" class="input">
-     <p class="title">
-       Surname:
-     </p>
-     <input placeholder="Maznichko" type="text" class="input">
-     <p class="title">
-       Email:
-     </p>
-     <input placeholder="misha.maznichko@urk.net" type="text" class="input">
-     <p class="title">
-       GitHub:
-     </p>
-     <input placeholder="" type="text" class="input">
-     <p class="title">
-       Linkedin:
-     </p>
-     <input placeholder="" type="text" class="input">
-     <div>
-       <p class="description">
-         About me:
+     <form [formGroup]="form" (ngSubmit)="sendProfile()">
+       <p class="title">
+         Name:
        </p>
-       <textarea placeholder="Type something..." class="text"></textarea>
-     </div>
-     <a class="change-btn" >
-       Change
-     </a>
+       <input  type="text" class="input" formControlName="name">
+       <p class="title">
+         Surname:
+       </p>
+       <input  type="text" class="input" formControlName="surname">
+       <p class="title">
+         Email:
+       </p>
+       <input  type="text" class="input" formControlName="email">
+       <p class="title">
+         GitHub:
+       </p>
+       <input  type="text" class="input" formControlName="git">
+       <p class="title">
+         Linkedin:
+       </p>
+       <input  type="text" class="input" formControlName="linkedin">
+       <div>
+         <p class="description">
+           About me:
+         </p>
+         <textarea formControlName="aboutMe"  class="text"></textarea>
+       </div>
+       <input type="submit"  class="change-btn"  value="Change">
+     </form>
    </div>
  </div>
